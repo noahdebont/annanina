@@ -1,0 +1,3 @@
+@import "~cq-base-react/src/css/base/responsive.scss";
+@import "~cq-base-react/src/css/base/mixins.scss";
+@import './instaFeedStyles.scss';

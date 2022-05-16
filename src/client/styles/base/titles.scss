@@ -1,0 +1,43 @@
+@import "../variables/variables";
+
+.title {
+  font-family: $bold-font;
+
+    &-sm {
+      font-family: $main-font;
+      font-size: 1.14rem;
+      font-style: normal;
+    }
+
+    &--center {
+        text-align: center;
+    }
+
+    &-h1 {
+        font-size: 2.57rem;
+        margin: 0 0 20px;
+    }
+    &-h2 {
+
+    }
+    &-h3 {
+        font-size: 1.71rem;
+    }
+    &-h4 {
+
+    }
+    &-h5 {
+
+    }
+    &-h6 {
+
+    }
+
+    &__container {
+        padding: 80px 0;
+
+      @include breakpoint(sm-min) {
+        padding: 30px 0;
+      }
+    }
+}

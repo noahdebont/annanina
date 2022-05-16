@@ -1,0 +1,140 @@
+.footer {
+  &__main {
+    display: flex;
+    width: 100%;
+    padding: 20px 0;
+    align-items: center;
+  }
+  &_logo {
+    width: 40%;
+    margin-right: 10px;
+  }
+  .payment_image {
+    width: 100%;
+    // padding-right: 20px;
+  }
+  .quote {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    line-height: 20px;
+    text-align: left;
+
+    &__text {
+      width: 250px;
+      @include breakpoint(md) {
+        font-size: 12px;
+        min-width: 180px;
+      }
+    }
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #fcfaf8;
+    padding: 30px 0;
+  }
+  &__top__section {
+    width: calc(100% / 3);
+    margin: 5px 20px;
+    text-align: center;
+    font-size: 14px;
+  }
+  &__social {
+    display: inline-block;
+  }
+  &__social-item {
+    width: 40px;
+    display: inline-block;
+    margin: 10px 10px;
+    img {
+      width: 100%;
+    }
+  }
+  &__main__section {
+    text-align: center;
+    width: 50%;
+
+    @include breakpoint(md) {
+      width: 100%;
+    }
+  }
+  .main__section {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    // justify-content: space-around;
+
+    @include breakpoint(md) {
+      flex-direction: column;
+    }
+  }
+  &__main__title {
+    position: relative;
+    text-transform: uppercase;
+    font-size: 13px;
+  }
+  .menu {
+    &__items{
+      width: 75%;
+      margin-left: 50px;
+
+      @include breakpoint(md) {
+        margin-left: 20px;
+        display: flex;
+      }
+    }
+
+    &__item {
+      @include breakpoint(md) {
+        border-bottom: none;
+        padding: 0;
+      }
+    }
+    &__item-link {
+      letter-spacing: normal;
+      font-size: 14px;
+      text-transform: none;
+      @include breakpoint(md) {
+        font-size: 0.75rem
+      }
+
+      &:hover {
+        color: black;
+      }
+    }
+    
+  }
+  .copyrights {
+    text-transform: lowercase;
+  }
+  .newsletter {
+    text-align: left;
+    form {
+      width: 100%;
+    }
+    &__title {
+      font-size: 14px;
+    }
+    &__input {
+      width: calc(100% - 120px);
+      height: 40px;
+      color: black;
+      border: 1px solid black;
+      border-right: none;
+      background-color: #fcfaf8;
+    }
+  }
+  button,
+  .button--icon-right,
+  .newsletter__btn {
+    height: 40px;
+    width: 120px;
+    padding: 0;
+    background: #fcfaf8;
+    color: black;
+    border: 1px solid black;
+  }
+}

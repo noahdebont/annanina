@@ -1,0 +1,9 @@
+.modal {
+  &__container {
+    max-width: 900px;
+  }
+
+  &__close {
+    cursor: pointer;
+  }
+}

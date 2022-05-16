@@ -1,0 +1,41 @@
+@import "header/header";
+@import "header/menu";
+@import "header/search";
+@import "header/multilanguage";
+@import "header/navigationMobile";
+
+@import "cart/cart";
+
+@import "product/product";
+@import "product/list/productOverview";
+@import "product/list/banner";
+@import "product/list/productFilters";
+@import "product/list/pagination";
+
+@import "product/detail/productDetail";
+@import "product/detail/relatedProducts";
+
+@import "home/home";
+@import "home/homeMobile";
+
+@import "blog/blog";
+@import "blog/blogDetail";
+
+@import "footer/footer";
+
+@import "storelocator/storelocator";
+
+@import "account/account";
+@import "account/accountWishlist";
+@import "account/login";
+
+@import "pages/default";
+@import "pages/contact";
+@import "pages/categoryPage";
+@import "pages/about";
+@import "pages/faq";
+
+@import "checkout/checkout";
+@import "checkout/checkoutCompleted";
+
+@import "wishlist/wishlist";

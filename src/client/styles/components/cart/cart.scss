@@ -1,0 +1,322 @@
+.cart {
+    top: 0;
+    height: 100vh;
+    background: #fff;
+    will-change: transform;
+    
+    &__overlay {
+      top: 0;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.36);
+    }
+  
+    &__header {
+      height: 130px;
+      padding: 0 40px;
+      display: flex;
+      justify-content: space-between;
+  
+      @include breakpoint(sm) {
+        height: 100px;
+        padding: 0 20px;
+      }
+    }
+  
+    &__title {
+      display: flex;
+      align-items: center;
+  
+      @include breakpoint(sm) {
+        display: block;
+        width: 100%;
+      }
+  
+      h3 {
+        font-size: 30px;
+        letter-spacing: normal;
+        font-family: $bold-font;
+        color: black;
+        max-width: 400px;
+        line-height: 40px;
+
+        @include breakpoint(sm) {
+          font-size: 18px;
+          position: static;
+          font-size: 30px;
+          text-align: center;
+          letter-spacing: 0.55px;
+          max-width: none;
+        }
+      }
+    }
+  
+    &__close {
+      width: 38px;
+      height: 38px;
+      font-size: 0;
+      border-radius: 50%;
+      border: 1px solid transparent;
+      background: url('../images/icon--close.svg') no-repeat center;
+      background-size: 18px;
+    }
+  
+    &__items {
+      padding: 0 40px;
+      height: calc(100vh - 265px);
+  
+      @include breakpoint(sm) {
+        height: calc(100vh - 325px);
+        padding: 0 20px;
+      }
+    }
+  
+    &__line-item {
+      padding: 0 0 25px;
+      margin-bottom: 25px;
+      border-bottom: 1px solid #ddd;
+      transform: translate(40px, 0);
+      opacity: 0;
+      transition: all 750ms;
+      transition-delay: 250ms;
+  
+      @include breakpoint(sm) {
+        padding: 0 0 18px;
+        margin-bottom: 18px;
+      }
+  
+      &:last-child {
+        border-bottom: 1px solid #ddd;
+      }
+  
+      &--is-updating {
+        opacity: 0.5 !important;
+        transition-delay: 0s;
+        transition: none;
+      }
+    }
+  
+    &__container {
+      &.cart--open {
+        .cart__line-item {
+          opacity: 1;
+          transform: none;
+        }
+      }
+    }
+  
+    &__remove {
+      margin: -20px 0 0 auto;
+      display: block;
+      position: static;
+      right: 0;
+      top: auto;
+      bottom: 10px;
+      font-size: 0;
+      width: 20px;
+      height: 20px;
+      background: url('../images/icon--delete.svg') no-repeat center;
+      background-size: 16px;
+  
+      @include breakpoint(sm) {
+        margin: -25px 0 0 auto;
+      }
+    }
+  
+    &__product-image {
+      background-color: #FCFAF8;
+      border: none;
+      width: 100px;
+      height: 100px;
+      min-height: 0;
+  
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+  
+      @include breakpoint(sm) {
+        width: 100px;
+        height: 100px;
+        min-height: 0;
+      }
+    }
+  
+    &__product-info {
+      width: calc(100% - 100px);
+      padding-left: 30px;
+      position: relative;
+  
+      @include breakpoint(sm) {
+        width: calc(100% - 100px);
+        padding-left: 20px;
+      }
+    }
+  
+    &__product-name {
+      font-size: 15px;
+      letter-spacing: normal;
+      margin-bottom: 12px;
+      line-height: 24px;
+      padding-right: 75px;
+      font-family: $bold-font;
+      color: black;
+      text-transform: none;
+  
+      @include breakpoint(sm) {
+        margin-bottom: 4px;
+        line-height: 16px;
+      }
+    }
+  
+    &__product-description {
+      display: none;
+    }
+  
+    &__price-container {
+      text-align: right;
+      position: absolute;
+      right: 0;
+      top: 5px;
+  
+      @include breakpoint(sm) {
+        top: 2px;
+      }
+    }
+  
+    &__price {
+      display: block;
+      color: black;
+      font-size: 14px;
+      font-family: $bold-font;
+      margin-right: 0;
+      margin-bottom: 6px;
+  
+      @include breakpoint(sm) {
+        font-size: 12px;
+        letter-spacing: normal;
+      }
+  
+      &-sale {
+        color: red;
+        font-family: $bold-font;
+      }
+    }
+  
+    &__option-values-label,
+    &__option-values-text,
+    &__quantity-label {
+      font-size: 14px;
+      line-height: 23px;
+      text-transform: none;
+      color: black;
+      letter-spacing: normal;
+  
+      @include breakpoint(sm) {
+        font-size: 12px;
+        letter-spacing: normal;
+      }
+    }
+  
+    &__option-values-container {
+      font-weight: normal;
+  
+      @include breakpoint(sm) {
+        margin-bottom: 0;
+        padding-right: 40px;
+      }
+    }
+  
+    &__option-values-text {
+    }
+  
+    &__quantity {
+      color: black;
+      &-container {
+        font-weight: normal;
+  
+        @include breakpoint(sm) {
+          padding-top: 0;
+          margin-top: 0;
+        }
+      }
+  
+      &-min,
+      &-plus {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        // border: 1px solid black;
+        display: inline-block;
+        font-weight: normal;
+        text-align: center;
+        font-size: 18px;
+        line-height: 23px;
+        transition: all 300ms;
+        color: black;
+      }
+      &-min {
+
+        // transform: scaleX(2);
+      }
+    }
+  
+    &__btn-container {
+      padding: 0 40px;
+  
+      @include breakpoint(sm) {
+        padding: 0 20px;
+      }
+    }
+  
+    &__footer {
+      padding: 0 20px 30px;
+  
+      @include breakpoint(sm) {
+        padding: 0 20px 10px;
+        border-top: 1px solid #EDE5D8;
+      }
+    }
+  
+    &__subtotal {
+      display: none;
+      font-weight: normal;
+      font-size: 14px;
+  
+      &:nth-of-type(2),
+      &:nth-of-type(4) {
+        display: none;
+      }
+    }
+  
+    &__total {
+      padding: 20px 20px 0 20px;
+      font-weight: normal;
+      border: none;
+      text-transform: none;
+      display: block;
+      text-align: right;
+      font-size: 16px;
+      letter-spacing: normal;
+      color: black;
+      font-family: $bold-font;
+  
+      &-price {
+        margin-left: 10px;
+        
+        @include breakpoint(sm-min) {
+          letter-spacing: normal;
+        }
+      }
+  
+      @include breakpoint(sm) {
+        font-size: 14px;
+        padding: 20px 0 10px 20px;
+      }
+    }
+    .custom-values {
+      &__item {
+        line-height: 18px;
+      }
+    }
+  }
+  

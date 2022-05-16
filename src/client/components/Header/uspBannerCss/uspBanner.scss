@@ -1,0 +1,35 @@
+body {
+  .slider {
+    font-size: 10px;
+    padding-top: 0;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    position: static;
+    background: white;
+    color: black;
+    letter-spacing: normal;
+
+    @include breakpoint(sm-min) {
+      display: flex !important;
+    }
+
+    .swiper-container {
+      width: 100%;
+    }
+
+    .swiper-scrollbar {
+      display: none;
+    }
+
+    &__wrapper {
+    }
+
+    &__item {
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+  }
+}

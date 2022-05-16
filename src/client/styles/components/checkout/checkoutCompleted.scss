@@ -1,0 +1,72 @@
+.checkout--thank-you-page {
+  
+    @include breakpoint(sm-min) {
+      position: relative; 
+      z-index: 950;
+    }
+    .checkout-completed {
+      width: 100vw;
+    }
+
+    .checkout-completed__title {
+      font-family: $bold-font;
+      font-size: 40px;
+      text-transform: none;
+      letter-spacing: normal;
+      line-height: 50px;
+      margin-bottom: 20px;
+      color: #000;
+
+      @include breakpoint(sm-min) {
+        font-size: 30px;
+        line-height: 38px;
+        letter-spacing: .55px;
+      }
+    }
+  
+    .checkout-completed__text {
+      font-size: 16px;
+      line-height: 28px;
+      color: black;
+      @include breakpoint(sm-min) {
+        font-size: 14px;
+      }
+    }
+  
+    .checkout-completed__order-number {
+      font-family: $bold-font;
+      color: black;
+      margin-bottom: 25px;
+    }
+  
+    .checkout__middle {
+      width: 100vw;
+      background-color: #FFFDF9; 
+      // background: url('../images/checkout-completed-left.png') no-repeat center left, url('../images/checkout-completed-right.png') no-repeat center right;
+      background-size: 300px, 300px;
+      position: relative;
+      z-index: 100;
+      min-height: calc(100vh - 104px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+        
+  
+      @include breakpoint(sm-min) {
+      // background: url('../images/checkout-completed-left.png') no-repeat top left, url('../images/checkout-completed-right.png') no-repeat bottom right;
+      background-size: 200px, 200px;
+      }
+    }
+    .checkout-completed {
+      background: transparent;
+      max-width: 600px;
+      margin: auto;
+      position: relative;
+      z-index: 10;
+  
+      @include breakpoint(sm-min) {
+        padding: 20px;
+      }
+    }
+  }
+  

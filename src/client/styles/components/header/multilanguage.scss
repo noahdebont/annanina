@@ -1,0 +1,123 @@
+.header--search-open {
+  .multilanguage {
+    @include breakpoint(md) {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+.header__multilanguage {
+  left: 85px;
+  right: auto;
+  top: 40px;
+  z-index: 100;
+
+  .multilanguage {
+    width: auto;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    font-weight: $font-weight-bold;
+
+    &__locale--active:after {
+      margin-left: 8px;
+    }
+  }
+}
+
+.header--search-open {
+  .multilanguage {
+    @include breakpoint(md) {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+.header__language-text {
+  position: absolute;
+  left: 20px;
+  top: 49px;
+  font-size: 12px;
+}
+
+.multilanguage {
+  font-family: $bold-font;
+  @include breakpoint(sm-min) {
+    display: none;
+    position: static;
+    transform: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  &__locale {
+
+    @include breakpoint(sm-min) {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 40px;
+      border: none;
+      border-left: 1px solid #f1f1f1;
+    }
+
+    &--active {
+
+      @include breakpoint(md) {
+        width: 45px;
+      }
+
+      @include breakpoint(sm-min) {
+        width: calc(100% / 3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        background: #f1f1f1;
+
+        &:hover {
+          background: #f1f1f1;
+        }
+      }
+
+      &:after {
+        @include breakpoint(sm-min) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__list {
+    background: #FCFAF8;
+    border: 1px solid #bbb;
+    padding: 0;
+    top: 28px;
+    width: 60px;
+    box-shadow: 0px 14px 33px -20px rgba(0,0,0,0.25);
+    transition: all 400ms;
+
+    @include breakpoint(sm-min) {
+      width: calc((100% / 3) * 2);
+      transform: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      height: 40px;
+      border: none;
+    }
+  }
+
+}
+
+.multilanguage--mobile {
+  .multilanguage {
+    @include breakpoint(sm-min) {
+      display: flex;
+    }
+  }
+}

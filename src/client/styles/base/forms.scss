@@ -1,0 +1,68 @@
+.form {
+
+  &--checkbox {
+
+    input:checked ~ span:before {
+      background: #fff;
+    }
+    span {
+      background-color: #fff;
+      border: 1px solid #ccc;
+    }
+    label {
+      font-weight: 400;
+    }
+
+    span {
+      &:before {
+        content: '\2713';
+        color: black;
+        text-align: center;
+      }
+    }
+  }
+
+  &--radio {
+    background: none;
+    span {
+      background-color: white;
+      border: 1px solid #ccc;
+    }
+
+    label {
+      font-weight: 400;
+    }
+  }
+
+  &--input {
+    background: none;
+    border: 1px solid #E6E6E6;
+    border-radius: 0;
+
+    &::placeholder {
+      color: black;
+    }
+  }
+
+  &--select {
+    select {
+      background: url('../images/select--arrow.svg') no-repeat center right 10px;
+    }
+  }
+
+  &--textarea {
+    background-color: #fff;
+    border: 1px solid #E6E6E6;
+
+    &::placeholder {
+      color: black;
+    }
+  }
+
+}
+
+input[type="text"], input[type="email"], input[type="password"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}

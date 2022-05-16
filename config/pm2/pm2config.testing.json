@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "name": "annanina_frontend",
+      "script": "./lib/server/index.js",
+      "env": {
+        "NODE_ENV": "development"
+      }
+    }
+  ]
+}

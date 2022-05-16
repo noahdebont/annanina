@@ -1,0 +1,150 @@
+.header {
+  background: #FCFAF8;
+  padding: 0 30px 20px;
+  transition: all 500ms;
+  height: 142px;
+  top: 0;
+  display: flex;
+  align-items: flex-end;
+
+  .loader {
+    display: none;
+  }
+
+  &__burger {
+    display: none;
+    @include breakpoint(md) {
+      display: none;
+    }
+  }
+
+  &__store-locator {
+    position: absolute;
+    left: 20px;
+    top: 75px;
+    letter-spacing: .07px;
+    font-size: 12px;
+    font-weight: bolder!important;
+    color: black;
+    text-transform: none;
+    text-decoration: none;
+  }
+
+  &--search-open {
+    .header__logo-container {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &__logo-container {
+    position: absolute;
+    top: 35px;
+    transform: translate(-50%, 0);
+    left: 50%;
+    width: 242px;
+    height: 40px;
+    z-index: 100;
+    transition: all 500ms;
+
+    img {
+      @include img-contain-center;
+    }
+  }
+
+  &__account {
+    right: 106px;
+    width: auto;
+    height: auto;
+    top: 50px;
+
+    .header__icon {
+      @include breakpoint(md) {
+        height: 22px;
+      }
+    }
+  }
+
+  &__wishlist {
+    position: absolute;
+    right: 64px;
+    top: 39px;
+
+    img {
+      width: 24px;
+    }
+  }
+
+  &__cart {
+    background: transparent;
+    text-align: center;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    transform: none;
+    top: 35px;
+    letter-spacing: 2.8px;
+    font-size: 12px;
+    font-weight: 600;
+
+    .header__icon {
+      height: 22px;
+    }
+
+    &__quantity {
+      color: black;
+      font-size: 10px;
+      left: 0;
+      letter-spacing: normal;
+      top: 2px;
+    }
+  }
+}
+
+.is-login, .is-account, .is-home {
+  .header-mobile__back-link {
+    display: none;
+  }
+}
+
+.is-checkout {
+  .header__cart {
+    pointer-events: none;
+    opacity: .3;
+  }
+  .header__logo-container {
+    top: 30px;
+  }
+  .header__store-locator {
+    display: none;
+  }
+}
+
+.header-mobile {
+  height: 60px;
+  position: relative;
+  background: #FCFAF8;
+
+  &__back-link {
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    background: url("../images/arrow--black.svg") no-repeat center;
+    background-size: 18px;
+    left: 10px;
+    top: 50%;
+    transform: translate(0, -50%) rotate(180deg);
+  }
+
+  &__logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    img {
+      width: 181px;
+    }
+  }
+}

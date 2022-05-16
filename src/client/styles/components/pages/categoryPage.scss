@@ -1,0 +1,118 @@
+.category-page {
+  animation: fadeIn 1.5s;
+  animation-fill-mode: backwards;
+
+  &__header-image {
+    width: 100vw;
+    margin-bottom: 50px;
+  }
+
+  &__menu {
+    max-width: 1320px;
+    margin: auto;
+    position: relative;
+    padding: 0 50px;
+
+    @include breakpoint(md) {
+      padding: 0 50px;
+    }
+
+    .menu {
+      &__items {
+        padding: 4px 0;
+
+        @include breakpoint(md) {
+          display: flex;
+        }
+      }
+      &__item {
+        border: none;
+        padding: 0;
+        text-align: center;
+        width: 170px;
+        text-align: center;
+        text-decoration: none;
+        // margin-right: 40px;
+
+        @include breakpoint(md) {
+          width: 120px;
+        }
+      }
+      &__item-link {
+        font-size: 16px;
+        white-space: normal;
+        letter-spacing: 1px;
+        font-family: $bold-font;
+
+        @include breakpoint(md) {
+          font-size: 12px;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+          color: black;
+        }
+      }
+      &__item-link-image,
+      &__item-link-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 170px;
+        overflow: hidden;
+        background: #ffffff;
+        margin: 0 auto 30px;
+
+        @include breakpoint(md) {
+          height: 120px;
+        }
+      }
+      &__item-icon,
+      &__item-image {
+        position: static;
+        transform: none;
+        width: 100%;
+        padding: 5px;
+        object-fit: cover;
+      }
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+      background: url('../images/arrow--sm.svg') no-repeat center;
+      background-size: contain;
+      transform: rotate(-90deg);
+
+      &.is-disabled {
+        opacity: .25;
+      }
+    }
+
+    .swiper-button-prev {
+      transform: rotate(90deg);
+    }
+  }
+
+  &__title {
+    font-size: 18px;
+    font-family: $bold-font;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  &__products {
+    max-width: 1280px;
+    margin: 60px auto;
+
+    .slider__wrapper {
+        justify-content: space-around;
+        margin-top: 80px;
+    }
+  }
+
+  &__instagram {
+      background: #FCFAF8;
+      padding: 50px 0;
+  }
+}

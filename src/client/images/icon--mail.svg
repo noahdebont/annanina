@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="96px" height="62px" viewBox="0 0 96 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon--mail" fill-rule="nonzero" fill="#000000">
+            <path d="M93,0.602 L3,0.602 C1.6016,0.602 0.5,1.7036 0.5,3.102 L0.5,58.801 C0.5,60.1994 1.6016,61.301 3,61.301 L93,61.301 C94.3984,61.301 95.5,60.1994 95.5,58.801 L95.5,3.102 C95.5,1.8012 94.3984,0.602 93,0.602 L93,0.602 Z M48,35.301 L10.102,5.602 L86,5.602 L48,35.301 Z M32.602,29.6018 L5.403,53.6018 L5.399094,8.3008 L32.602,29.6018 Z M36.602,32.6995 L46.4028,40.3987 C46.9028,40.79714 47.4028,40.8987 47.9028,40.8987 C48.4028,40.8987 49.0044,40.69948 49.4028,40.3987 L59.2036,32.6995 L86.0046,56.3985 L9.8016,56.3985 L36.602,32.6995 Z M63.399,29.6018 L90.598,8.4028 L90.598,53.7038 L63.399,29.6018 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

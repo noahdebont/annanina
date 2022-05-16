@@ -1,0 +1,36 @@
+@import "../variables/variables";
+
+.button {
+    background: black;
+    color: white;
+    text-transform: none;
+    font-family: $bold-font;
+    font-size: 12px;
+    padding: 17px 5px;
+    min-width: 0;
+    
+    &:hover {
+      background: black;
+      color: white;
+      border: 1px solid black;
+    }
+
+    &--secondary {
+      background: #5D5D5D;
+      color: white;
+    }
+
+    &--plain {
+        background: white;
+    }
+
+    &--disabled, &[disabled='disabled'] {
+      background: #717171;
+      cursor: not-allowed;
+
+      &:hover {
+        background: #717171;
+        color: black;
+      }
+    }
+}
